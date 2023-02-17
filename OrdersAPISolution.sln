@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8495CD16-EFB8-4726-97A9-EE73AB1DDDAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersAPI", "src\OrdersAPI\OrdersAPI.csproj", "{D99F25E4-3D7F-414E-B005-9979B6A98E5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1864C333-E8BF-4D72-BB45-F71D57476FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersAPI.Tests", "test\OrdersAPI.Tests\OrdersAPI.Tests.csproj", "{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D99F25E4-3D7F-414E-B005-9979B6A98E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D99F25E4-3D7F-414E-B005-9979B6A98E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D99F25E4-3D7F-414E-B005-9979B6A98E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D99F25E4-3D7F-414E-B005-9979B6A98E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D99F25E4-3D7F-414E-B005-9979B6A98E5A} = {8495CD16-EFB8-4726-97A9-EE73AB1DDDAB}
+		{2EB351D7-0BCC-4FC2-8BDF-EFF54F558B15} = {1864C333-E8BF-4D72-BB45-F71D57476FEF}
+	EndGlobalSection
+EndGlobal
