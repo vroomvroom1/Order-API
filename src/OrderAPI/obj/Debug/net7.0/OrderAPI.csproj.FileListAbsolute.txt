@@ -24,3 +24,14 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.pdb
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.genruntimeconfig.cache
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/ref/OrderAPI.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Humanizer.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Npgsql.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/System.CodeDom.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.csproj.CopyComplete
