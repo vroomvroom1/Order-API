@@ -1,12 +1,17 @@
 using Microsoft.EntityFrameworkCore;
 using OrderAPI.Models;
+using Npgsql;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("PostgreSqlConnection");
+var npgsql = new NpgsqlConnectionStringBuilder();
+
+npgsql.ConnectionString = builder.Configuration.GetConnectionString("PostgreSqlConnection");
+npgsql.Username = builder.Configuration["UserID"];
+npgsql.Password = builder.Configuration["Password"];
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<OrderContext>(opt =>
-    opt.UseNpgsql(connectionString));
+    opt.UseNpgsql(npgsql.ConnectionString));
 
 var app = builder.Build();
 
