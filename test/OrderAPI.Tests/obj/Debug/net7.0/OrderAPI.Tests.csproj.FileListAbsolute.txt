@@ -109,3 +109,4 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Npgsql.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll

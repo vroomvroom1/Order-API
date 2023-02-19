@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "efp1Pw5fOdHStynmZTQva7A+Uq5vVBamhqH9TULwYDORO+zyXrAv8UDyyQzgp0B4wKHXDn9+2FnUGMXIhbO7mA==",
+  "dgSpecHash": "EMdwUFeWydfAkthX6FAawffmUPbFAYNrT1EadhTo6tYcH/qIs4XU6XQnh2qc+NbNwZc/4/cniIoNuoINuDVBHA==",
   "success": true,
   "projectFilePath": "/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/OrderAPI.Tests.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore/7.0.3/microsoft.entityframeworkcore.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.3/microsoft.entityframeworkcore.abstractions.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.3/microsoft.entityframeworkcore.inmemory.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.3/microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
