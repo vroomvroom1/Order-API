@@ -1,11 +1,12 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OrderAPI.Models
 {
     public class Order
     {
-        // TODO: Make GUID
-        public int Id {get; set;}
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id {get; set;}
         [Required]
         public string? OrderType {get; set;}
         [Required]

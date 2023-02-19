@@ -21,10 +21,28 @@ namespace OrderAPI.Controllers
             return orderItems.ToList();
         }
 
+        //GET: api/v1/orders/{Id}
+        [HttpGet("{id}")]
+        public ActionResult<Order> GetOrderItem(Guid id)
+        {
+            var orderItem = _context.OrderItems.Find(id);
+
+            if (orderItem == null)
+                return NotFound();
+
+            return orderItem;
+        }        
+
         //POST: api/v1/orders
         [HttpPost]
         public ActionResult<Order> PostOrderItem(Order order)
         {
+            if (order.CreatedDate == DateTime.MinValue)
+            {
+                order.CreatedDate = DateTime.Now;
+            }
+
+            order.Id = Guid.NewGuid();
             _context.OrderItems.Add(order);
 
             try 
@@ -36,19 +54,22 @@ namespace OrderAPI.Controllers
                 return BadRequest();
             }
 
-            return CreatedAtAction("GetOrderItem", new Order{Id = order.Id}, order);
+            return CreatedAtAction(nameof(GetOrderItem), new Order{Id = order.Id}, order);
         }
 
         //PUT: api/v1/orders/{Id}
         [HttpPut("{id}")]
-        public ActionResult PutOrderItem(int id, Order order)
+        public ActionResult PutOrderItem(Guid id, Order order)
         {
-            if (id != order.Id)
-            {
-                return BadRequest();
-            }
+            var orderItem = _context.OrderItems.Find(id);
 
-            _context.Entry(order).State = EntityState.Modified;
+            if (orderItem == null)
+                return NotFound();
+
+            orderItem.CustomerName = order.CustomerName;
+            orderItem.CreatedByUsername = order.CreatedByUsername;
+            orderItem.OrderType = order.OrderType;
+
             _context.SaveChanges();
 
             return NoContent();
@@ -56,7 +77,7 @@ namespace OrderAPI.Controllers
 
         //DELETE api/v1/orders/{Id}
         [HttpDelete("{id}")]
-        public ActionResult<Order> DeleteOrderItem(int id)
+        public ActionResult<Order> DeleteOrderItem(Guid id)
         {
             var orderItem = _context.OrderItems.Find(id);
 
@@ -68,5 +89,11 @@ namespace OrderAPI.Controllers
 
             return orderItem;
         }
+
+    private bool OrderItemExists(Guid id)
+    {
+        return _context.OrderItems.Any(e => e.Id == id);
+    }
+
     }
 }

@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
 namespace OrderAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddOrdersToDB : Migration
+    public partial class RecreateTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,12 +15,11 @@ namespace OrderAPI.Migrations
                 name: "OrderItems",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    OrderType = table.Column<int>(type: "integer", nullable: false),
-                    CustomerName = table.Column<string>(type: "text", nullable: true),
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    OrderType = table.Column<string>(type: "text", nullable: false),
+                    CustomerName = table.Column<string>(type: "text", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    CreatedByUsername = table.Column<string>(type: "text", nullable: true)
+                    CreatedByUsername = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {

@@ -12,8 +12,8 @@ using OrderAPI.Models;
 namespace OrderAPI.Migrations
 {
     [DbContext(typeof(OrderContext))]
-    [Migration("20230218231742_AddOrderTypesRelationship")]
-    partial class AddOrderTypesRelationship
+    [Migration("20230219172744_RecreateTable")]
+    partial class RecreateTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,11 +27,9 @@ namespace OrderAPI.Migrations
 
             modelBuilder.Entity("OrderAPI.Models.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                        .HasColumnType("uuid");
 
                     b.Property<string>("CreatedByUsername")
                         .IsRequired()
@@ -44,42 +42,13 @@ namespace OrderAPI.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("OrderTypeId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderTypeId");
-
-                    b.ToTable("OrderItems");
-                });
-
-            modelBuilder.Entity("OrderAPI.Models.OrderType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Type")
+                    b.Property<string>("OrderType")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("OrderTypeItems");
-                });
-
-            modelBuilder.Entity("OrderAPI.Models.Order", b =>
-                {
-                    b.HasOne("OrderAPI.Models.OrderType", "OrderType")
-                        .WithMany()
-                        .HasForeignKey("OrderTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("OrderType");
+                    b.ToTable("OrderItems");
                 });
 #pragma warning restore 612, 618
         }

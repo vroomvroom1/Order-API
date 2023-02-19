@@ -9,6 +9,8 @@ npgsql.ConnectionString = builder.Configuration.GetConnectionString("PostgreSqlC
 npgsql.Username = builder.Configuration["UserID"];
 npgsql.Password = builder.Configuration["Password"];
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 builder.Services.AddControllers();
 builder.Services.AddDbContext<OrderContext>(opt =>
     opt.UseNpgsql(npgsql.ConnectionString));
