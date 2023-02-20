@@ -37,3 +37,8 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.csproj.CopyComplete
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/AutoMapper.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.MvcApplicationPartsAssemblyInfo.cs

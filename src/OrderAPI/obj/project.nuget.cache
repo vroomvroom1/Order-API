@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jKH0j6Dq6quxpGn6XcUb6XRq/8fyVpOW+37P9J/2pQFAE4UmgamYA1CvFoqexSeVyHGzwZ5WxZ/On2bsDENTeg==",
+  "dgSpecHash": "HVV7YNpOCfA/b1S3xlrtqahxnl6b9ESyMCR6FqK9M5///mUoZF4fVabnVO1BLfE7FFEl7/21rh6gO6TwRD6m8g==",
   "success": true,
   "projectFilePath": "/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/OrderAPI.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.3/microsoft.entityframeworkcore.analyzers.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.design/7.0.3/microsoft.entityframeworkcore.design.7.0.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.3/microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
@@ -23,9 +24,14 @@
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/npgsql/7.0.2/npgsql.7.0.2.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.3/npgsql.entityframeworkcore.postgresql.7.0.3.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/mattvroom/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/mattvroom/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
