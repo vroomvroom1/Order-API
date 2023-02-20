@@ -5,18 +5,42 @@ namespace OrderAPI.Tests
 {
     public class OrderTests
     {
-        [Fact]
-        public void CanChangeHowTo()
+
+        Order testOrder;
+
+        public OrderTests()
         {
-            var testOrder = new Order 
+            testOrder = new Order
             {
                 OrderType = "Standard",
                 CustomerName = "Matt Vroom",
                 CreatedDate = new DateTime(),
                 CreatedByUsername = "mvroom"
             };
+        }
 
-            Assert.Equal("Matt Vroom", testOrder.CustomerName);
+        [Fact]
+        public void CanChangeCustomerName()
+        {
+            testOrder.CustomerName = "Joe";
+
+            Assert.Equal("Joe", testOrder.CustomerName);
         } 
+
+        [Fact]
+        public void CanChangeOrderType()
+        {
+            testOrder.OrderType = "SaleOrder";
+
+            Assert.Equal("SaleOrder", testOrder.OrderType);
+        }
+
+        [Fact]
+        public void CanChangeUsername()
+        {
+            testOrder.CreatedByUsername = "joe412";
+
+            Assert.Equal("joe412", testOrder.CreatedByUsername);
+        }
     }
 }

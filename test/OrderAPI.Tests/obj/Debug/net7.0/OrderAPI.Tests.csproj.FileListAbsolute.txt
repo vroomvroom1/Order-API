@@ -110,3 +110,7 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Npgsql.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/AutoMapper.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Castle.Core.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Moq.dll
