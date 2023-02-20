@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using AutoMapper;
 using OrderAPI.Models;
+using OrderAPI.Data;
+using OrderAPI.Dtos;
 using Microsoft.EntityFrameworkCore;
 
 namespace OrderAPI.Controllers
@@ -9,91 +12,84 @@ namespace OrderAPI.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly OrderContext _context;
-        public OrdersController(OrderContext context) => _context = context;
+        private readonly IOrderAPIRepo _repository;
+        private readonly IMapper _mapper;
+
+        public OrdersController(IOrderAPIRepo repository, IMapper mapper)
+        {
+            _repository = repository;
+            _mapper = mapper;
+        }
 
         //GET: api/v1/orders?orderType={orderType}
         [HttpGet]
-        public ActionResult<IEnumerable<Order>> GetOrderItemsByOrderType(string orderType)
+        public ActionResult<IEnumerable<OrderGetDto>> GetOrderItemsByOrderType(string orderType)
         {
-            var orderItems = _context.OrderItems.Where(o => o.OrderType == orderType);
+            var orderItems = _repository.GetOrderItemsByOrderType(orderType);
 
-            return orderItems.ToList();
+            if (orderItems == null)
+                return NotFound();
+
+            return Ok(_mapper.Map<IEnumerable<OrderGetDto>>(orderItems));
         }
 
         //GET: api/v1/orders/{Id}
-        [HttpGet("{id}")]
-        public ActionResult<Order> GetOrderItem(Guid id)
+        [HttpGet("{id}", Name = "GetOrderItemById")]
+        public ActionResult<OrderGetDto> GetOrderItemById(Guid Id)
         {
-            var orderItem = _context.OrderItems.Find(id);
+            var orderItem = _repository.GetOrderItemById(Id);
 
             if (orderItem == null)
                 return NotFound();
 
-            return orderItem;
+            return Ok(_mapper.Map<OrderGetDto>(orderItem));
         }        
 
         //POST: api/v1/orders
         [HttpPost]
-        public ActionResult<Order> PostOrderItem(Order order)
+        public ActionResult<OrderPostDto> PostOrderItem(OrderPostDto orderPostDto)
         {
-            if (order.CreatedDate == DateTime.MinValue)
-            {
-                order.CreatedDate = DateTime.Now;
-            }
+            var orderModel = _mapper.Map<Order>(orderPostDto);
+            _repository.PostOrderItem(orderModel);
+            _repository.SaveChanges();
 
-            order.Id = Guid.NewGuid();
-            _context.OrderItems.Add(order);
+            var orderGetDto = _mapper.Map<OrderGetDto>(orderModel);
 
-            try 
-            {
-                _context.SaveChanges();
-            }
-            catch
-            {
-                return BadRequest();
-            }
-
-            return CreatedAtAction(nameof(GetOrderItem), new Order{Id = order.Id}, order);
+            return CreatedAtRoute(nameof(GetOrderItemById), new {Id = orderGetDto.Id}, orderGetDto);
         }
 
         //PUT: api/v1/orders/{Id}
         [HttpPut("{id}")]
-        public ActionResult PutOrderItem(Guid id, Order order)
+        public ActionResult PutOrderItem(Guid id, OrderPutDto orderPutDto)
         {
-            var orderItem = _context.OrderItems.Find(id);
+            var orderModelFromRepo = _repository.GetOrderItemById(id);
 
-            if (orderItem == null)
+            if (orderModelFromRepo == null)
                 return NotFound();
 
-            orderItem.CustomerName = order.CustomerName;
-            orderItem.CreatedByUsername = order.CreatedByUsername;
-            orderItem.OrderType = order.OrderType;
+            orderModelFromRepo.CustomerName = orderPutDto.CustomerName;
+            orderModelFromRepo.CreatedByUsername = orderPutDto.CreatedByUsername;
+            orderModelFromRepo.OrderType = orderPutDto.OrderType;
 
-            _context.SaveChanges();
+            _repository.SaveChanges();
 
             return NoContent();
         }
 
         //DELETE api/v1/orders/{Id}
         [HttpDelete("{id}")]
-        public ActionResult<Order> DeleteOrderItem(Guid id)
+        public ActionResult DeleteOrderItem(Guid id)
         {
-            var orderItem = _context.OrderItems.Find(id);
-
-            if (orderItem == null)
+            var orderModelFromRepo = _repository.GetOrderItemById(id);
+            if(orderModelFromRepo == null)
+            {
                 return NotFound();
+            }
 
-            _context.OrderItems.Remove(orderItem);
-            _context.SaveChanges();
+            _repository.DeleteOrderItem(orderModelFromRepo);
+            _repository.SaveChanges();
 
-            return orderItem;
+            return NoContent();
         }
-
-    private bool OrderItemExists(Guid id)
-    {
-        return _context.OrderItems.Any(e => e.Id == id);
-    }
-
     }
 }

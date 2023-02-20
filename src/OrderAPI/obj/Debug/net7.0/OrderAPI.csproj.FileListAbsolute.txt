@@ -35,3 +35,5 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/System.CodeDom.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.csproj.CopyComplete
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/AutoMapper.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

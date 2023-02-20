@@ -15,7 +15,7 @@ namespace OrderAPI.Tests
             optionsBuilder = new DbContextOptionsBuilder<OrderContext>();
             optionsBuilder.UseInMemoryDatabase("UnitTestInMemBD");
             dbContext = new OrderContext(optionsBuilder.Options);
-            controller = new OrdersController(dbContext);
+            // controller = new OrdersController(dbContext);
         }
 
         public void Dispose()
@@ -39,7 +39,7 @@ namespace OrderAPI.Tests
             var dbContext = new OrderContext(optionsBuilder.Options);
 
             //Controller
-            var controller = new OrdersController(dbContext);
+            // var controller = new OrdersController(dbContext);
 
             var result = controller.GetOrderItemsByOrderType("Standard");
 
