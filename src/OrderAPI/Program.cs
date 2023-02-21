@@ -49,6 +49,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 var app = builder.Build();
 
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseSwagger();
 app.UseSwaggerUI();
