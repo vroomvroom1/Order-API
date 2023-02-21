@@ -45,7 +45,19 @@ namespace OrderAPI.Controllers
                 return NotFound();
 
             return Ok(_mapper.Map<OrderGetDto>(orderItem));
-        }        
+        } 
+
+        //GET: api/v1/orders
+        [HttpGet]
+        public ActionResult<IEnumerable<OrderGetDto>> GetOrderItems()
+        {
+            var orderItems = _repository.GetOrderItems();
+
+            if (orderItems == null)
+                return NotFound();
+
+            return Ok(_mapper.Map<IEnumerable<OrderGetDto>>(orderItems));
+        }         
 
         //POST: api/v1/orders
         [HttpPost]

@@ -8,6 +8,7 @@ namespace OrderAPI.Data
         bool SaveChanges();
 
         IEnumerable<Order> GetOrderItemsByOrderType(string orderType);
+        IEnumerable<Order> GetOrderItems();
         Order GetOrderItemById(Guid id);
         void PostOrderItem(Order order);
         void PutOrderItem(Order order);

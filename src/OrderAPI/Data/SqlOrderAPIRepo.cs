@@ -45,6 +45,11 @@ namespace OrderAPI.Data
             return _context.OrderItems.Where(o => o.OrderType == orderType);
         }
 
+        public IEnumerable<Order> GetOrderItems()
+        {
+            return _context.OrderItems;
+        }
+
         public Order GetOrderItemById(Guid id)
         {
             var order = _context.OrderItems.Find(id);
