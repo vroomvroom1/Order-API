@@ -54,7 +54,7 @@ app.UseSwaggerUI(options =>
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/health", () => Results.Ok());
+app.MapGet("/health", () => "hello, this is working");
 
 app.MapControllers();
 
