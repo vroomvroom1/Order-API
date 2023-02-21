@@ -49,7 +49,6 @@ namespace OrderAPI.Controllers
         }        
 
         //POST: api/v1/orders
-        [Authorize]
         [HttpPost]
         public ActionResult<OrderPostDto> PostOrderItem(OrderPostDto orderPostDto)
         {
