@@ -114,3 +114,14 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Castle.Core.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Moq.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/test/OrderAPI.Tests/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

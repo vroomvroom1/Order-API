@@ -63,6 +63,9 @@ jobs:
         with:
           name: .net-app
           path: ${{env.DOTNET_ROOT}}/myapp
+      
+      - name: Test
+        run: dotnet test
 
   # deploy:
   #   permissions:
