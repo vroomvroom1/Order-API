@@ -14,12 +14,22 @@ npgsql.Password = builder.Configuration["Password"];
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 builder.Services.AddControllers();
 builder.Services.AddDbContext<OrderContext>(opt =>
     opt.UseNpgsql(npgsql.ConnectionString));
 builder.Services.AddScoped<IOrderAPIRepo, SqlOrderAPIRepo>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://127.0.0.1:5173/");
+                      });
+});
 builder.Services.AddSwaggerGen(options => 
 {
     options.SwaggerDoc("v1", new OpenApiInfo
