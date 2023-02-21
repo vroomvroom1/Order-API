@@ -23,7 +23,6 @@ namespace OrderAPI.Controllers
         }
 
         //GET: api/v1/orders?orderType={orderType}
-        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<OrderGetDto>> GetOrderItemsByOrderType(string orderType)
         {
