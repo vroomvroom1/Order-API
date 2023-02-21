@@ -3,6 +3,7 @@ using OrderAPI.Models;
 using OrderAPI.Data;
 using Npgsql;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 var npgsql = new NpgsqlConnectionStringBuilder();
@@ -29,6 +30,13 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(opt =>
+    {
+      opt.Audience = builder.Configuration["ResourceId"];
+      opt.Authority = $"{builder.Configuration["AAD:Instance"]}{builder.Configuration["TenantId"]}";
+    });
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -42,6 +50,9 @@ app.UseSwaggerUI(options =>
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     options.RoutePrefix = string.Empty;
 });
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapGet("/health", () => Results.Ok());
 

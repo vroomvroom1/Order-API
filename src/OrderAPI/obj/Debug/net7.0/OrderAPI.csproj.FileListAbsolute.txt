@@ -42,3 +42,10 @@
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/obj/Debug/net7.0/OrderAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/mattvroom/Documents/csharp/OrdersAPISolution/src/OrderAPI/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

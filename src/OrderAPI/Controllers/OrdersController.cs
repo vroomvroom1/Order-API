@@ -5,6 +5,7 @@ using OrderAPI.Models;
 using OrderAPI.Data;
 using OrderAPI.Dtos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OrderAPI.Controllers
 {
@@ -22,6 +23,7 @@ namespace OrderAPI.Controllers
         }
 
         //GET: api/v1/orders?orderType={orderType}
+        [Authorize]
         [HttpGet]
         public ActionResult<IEnumerable<OrderGetDto>> GetOrderItemsByOrderType(string orderType)
         {
@@ -34,6 +36,7 @@ namespace OrderAPI.Controllers
         }
 
         //GET: api/v1/orders/{Id}
+        [Authorize]
         [HttpGet("{id}", Name = "GetOrderItemById")]
         public ActionResult<OrderGetDto> GetOrderItemById(Guid Id)
         {
@@ -46,6 +49,7 @@ namespace OrderAPI.Controllers
         }        
 
         //POST: api/v1/orders
+        [Authorize]
         [HttpPost]
         public ActionResult<OrderPostDto> PostOrderItem(OrderPostDto orderPostDto)
         {
@@ -59,6 +63,7 @@ namespace OrderAPI.Controllers
         }
 
         //PUT: api/v1/orders/{Id}
+        [Authorize]
         [HttpPut("{id}")]
         public ActionResult PutOrderItem(Guid id, OrderPutDto orderPutDto)
         {
@@ -77,6 +82,7 @@ namespace OrderAPI.Controllers
         }
 
         //DELETE api/v1/orders/{Id}
+        [Authorize]
         [HttpDelete("{id}")]
         public ActionResult DeleteOrderItem(Guid id)
         {
