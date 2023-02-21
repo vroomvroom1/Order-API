@@ -51,6 +51,12 @@ app.UseSwaggerUI(options =>
     options.RoutePrefix = string.Empty;
 });
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<OrderContext>();
+    db.Database.Migrate();
+}
+
 app.UseAuthentication();
 app.UseAuthorization();
 
