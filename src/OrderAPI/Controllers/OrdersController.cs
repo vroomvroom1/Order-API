@@ -47,8 +47,8 @@ namespace OrderAPI.Controllers
             return Ok(_mapper.Map<OrderGetDto>(orderItem));
         } 
 
-        //GET: api/v1/orders
-        [HttpGet]
+        //GET: api/v1/orders/all
+        [HttpGet("all", Name = "GetOrderItems")]
         public ActionResult<IEnumerable<OrderGetDto>> GetOrderItems()
         {
             var orderItems = _repository.GetOrderItems();
