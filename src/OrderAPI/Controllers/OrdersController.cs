@@ -6,6 +6,7 @@ using OrderAPI.Data;
 using OrderAPI.Dtos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 
 namespace OrderAPI.Controllers
 {
@@ -48,6 +49,7 @@ namespace OrderAPI.Controllers
         } 
 
         //GET: api/v1/orders/all
+        [EnableCors("MyAllowSpecificOrigins")]
         [HttpGet("all", Name = "GetOrderItems")]
         public ActionResult<IEnumerable<OrderGetDto>> GetOrderItems()
         {
