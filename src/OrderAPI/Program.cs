@@ -27,7 +27,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy  =>
                       {
-                          policy.WithOrigins("http://127.0.0.1:5173/");
+                          policy.WithOrigins("http://127.0.0.1:5173/", "https://orders-frontend-khaki.vercel.app/")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
                       });
 });
 builder.Services.AddSwaggerGen(options => 
