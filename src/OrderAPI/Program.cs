@@ -25,9 +25,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy  =>
+                      builder  =>
                       {
-                          policy.WithOrigins("http://127.0.0.1:5173/", "https://orders-frontend-khaki.vercel.app/")
+                          builder.AllowAnyOrigin()
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                       });
