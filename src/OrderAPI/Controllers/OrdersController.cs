@@ -36,7 +36,6 @@ namespace OrderAPI.Controllers
         }
 
         //GET: api/v1/orders/{Id}
-        [Authorize]
         [HttpGet("{id}", Name = "GetOrderItemById")]
         public ActionResult<OrderGetDto> GetOrderItemById(Guid Id)
         {
@@ -49,7 +48,6 @@ namespace OrderAPI.Controllers
         } 
 
         //GET: api/v1/orders/all
-        [EnableCors("MyAllowSpecificOrigins")]
         [HttpGet("all", Name = "GetOrderItems")]
         public ActionResult<IEnumerable<OrderGetDto>> GetOrderItems()
         {
@@ -76,7 +74,6 @@ namespace OrderAPI.Controllers
         }
 
         //PUT: api/v1/orders/{Id}
-        [Authorize]
         [HttpPut("{id}")]
         public ActionResult PutOrderItem(Guid id, OrderPutDto orderPutDto)
         {
@@ -95,7 +92,6 @@ namespace OrderAPI.Controllers
         }
 
         //DELETE api/v1/orders/{Id}
-        [Authorize]
         [HttpDelete("{id}")]
         public ActionResult DeleteOrderItem(Guid id)
         {
